@@ -1,0 +1,48 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full height page */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* React root */
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Center content */
+.app-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #464444; /* optional */
+}
+
+/* Optional styling for signup box */
+.app-container > div {
+  background: rgb(12, 12, 12);
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+}
+
+/* Button */
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
