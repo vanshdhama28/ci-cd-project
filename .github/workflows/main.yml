@@ -1,4 +1,4 @@
-name: First CI Pipeline
+name: CI Pipeline (React + Docker)
 
 on:
   push:
@@ -13,5 +13,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run a simple command
-        run: echo "CI pipeline is working!"
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        working-directory: exp1
+        run: npm install
+
+      - name: Build React app
+        working-directory: exp1
+        run: npm run build
+
+      - name: Build Docker image
+        working-directory: exp1
+        run: docker build -t react-app .
