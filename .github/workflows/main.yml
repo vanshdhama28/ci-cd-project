@@ -39,7 +39,7 @@ jobs:
       - name: Push Docker image to Docker Hub
         run: docker push ${{ secrets.DOCKER_USERNAME }}/react-ci-cd-app:latest
 
-  deploy:
+    deploy:
     needs: build
     runs-on: ubuntu-latest
 
