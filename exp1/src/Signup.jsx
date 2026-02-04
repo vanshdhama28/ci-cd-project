@@ -5,7 +5,7 @@ function Signup() {
     const { formData, handleChange, handleSubmit } = useForm()
   return (
       <div>
-          <h1>Enter your details</h1>
+          <h1>Enter your Credentials</h1>
           <hr />
           <form onSubmit={handleSubmit}>
               <input type="text" placeholder="Username" name='username' value={formData.username } onChange={handleChange} />
